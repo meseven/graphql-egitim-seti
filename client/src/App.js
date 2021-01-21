@@ -5,11 +5,12 @@ import "./App.css";
 import MovieList from "./components/MovieList";
 import NewMovieForm from "./components/NewMovieForm";
 
-import ApolloClient from "apollo-boost";
-import { ApolloProvider } from "react-apollo";
+import { ApolloClient, InMemoryCache } from "@apollo/client";
+import { ApolloProvider } from "@apollo/client";
 
 const client = new ApolloClient({
-	uri: "http://67.205.135.230:5000/graphql"
+	uri: "http://67.205.135.230:5000/graphql",
+	cache: new InMemoryCache(),
 });
 
 class App extends Component {
