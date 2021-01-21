@@ -19,7 +19,7 @@ class App extends Component {
 			<ApolloProvider client={client}>
 				<div className="App">
 					<NewMovieForm />
-					<MovieList />
+					<MovieList/>
 				</div>
 			</ApolloProvider>
 		);
